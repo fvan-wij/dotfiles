@@ -11,4 +11,6 @@ if status is-interactive
     end
     abbr --add gall git add -A
     abbr --add gco git checkout
+    abbr --add gcm git commit -m
+    abbr --add gpo git push origin
 end
