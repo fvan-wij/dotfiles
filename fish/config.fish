@@ -4,14 +4,15 @@ if status is-interactive
 
     # Aliases
     alias xclip="xclip -selection clipboard"
+    alias ctop="~/.local/bin/ctop"
     set -g fish_color_scheme fairground
     set -U fish_greeting ""
 
     # OS Dependant abbreviatoins or aliases
-    if test -f /proc/version && string match -q "*Linux*" (cat /proc/version)
-        alias open="xdg-open"
-    else
+    if test -f /proc/version && string match -q "*WSL2*" (cat /proc/version)
         alias open="explorer.exe"
+    else
+        alias open="xdg-open"
     end
 
     # Abbreviations
